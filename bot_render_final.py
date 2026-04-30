@@ -35,7 +35,13 @@ except Exception as e:
     FILE_IDS_DICT = {}
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    welcome_text = "Привіт 🥰\nСьогодні твій день! З днем народження! 🎂"
+    welcome_text = "Привіт 🥰
+Сьогодні твій день, і ми хочемо, щоб він почався по-особливому!
+За цим посиланням - сюрприз від людей, яким пощастило працювати з тобою.
+Рекомендуємо дивитись у спокійній атмосфері й з усмішкою ☺️
+З днем народження! 🎂
+
+*відео містить БТ 😉"
     keyboard = [[InlineKeyboardButton("🎉 Розпочати подорож", callback_data="video_0")]]
     await update.message.reply_text(welcome_text, reply_markup=InlineKeyboardMarkup(keyboard))
 
